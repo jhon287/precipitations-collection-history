@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Precipitations Test</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+<body>
+  <ul id="navigation" role="navigation" aria-label="Settings for precipitation data">
+    <li>Past days: <input type="number" id="pastDays" value="7" min="0" max="93" onchange="update()"></li>
+    <li>Forecast days: <input type="number" id="forecastDays" value="0" min="0" max="16" onchange="update()"></li>
+    <li>City:
+      <select id="city" onchange="update()">
+        <option value="52.3676,4.9041">Amsterdam</option>
+        <option value="52.5200,13.4050">Berlin</option>
+        <option value="50.8503,4.3517">Brussels</option>
+        <option value="40.4168,-3.7038">Madrid</option>
+        <option value="50.7033,4.9891" selected>Orp-Le-Grand</option>
+        <option value="48.8566,2.3522">Paris</option>
+      </select>
+  </ul>
+  <div class="container">
+    <canvas id="myChart" role="img" aria-label="Line chart showing collected precipitations in liters over time">
+      <p>Collected Precipitations in liters</p>
+    </canvas>
+    <table id="precipitationsTable" role="table" aria-label="Table showing collected precipitations in liters for each date">
+      <thead>
+        <tr>
+          <td>Date</td>
+          <td>Precipitations (mm)</td>
+          <td>Collected Precipitations (l)</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td id="totalPrecipitations">0</td>
+          <td id="totalCollectedPrecipitations">0</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
