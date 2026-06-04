@@ -1,2 +1,1 @@
-# precipitations-collection-history
-Precipitations Collection History
+# Precipitations Collection History

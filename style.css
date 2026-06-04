@@ -38,7 +38,6 @@ table#precipitationsTable td {
     padding: 5px;
 }
 
-
 ul#navigation {
     background-color: #333333;
     list-style-type: none;
@@ -52,8 +51,7 @@ ul#navigation li {
   float: left;
 }
 
-/* Change the link and background color on hover */
- ul#navigation li:hover {
+ul#navigation li:hover {
   background-color: #555555;
   color: white;
 }
